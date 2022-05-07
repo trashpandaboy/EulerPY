@@ -14,3 +14,8 @@ def factorial(number):
         return number * factorial(number-1)
     else:
         return number
+    
+def sumOfDigits(number):
+    charsOfNumber = list(str(number))
+    numbers = [int(i) for i in charsOfNumber]
+    return sum(numbers)
