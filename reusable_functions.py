@@ -9,6 +9,21 @@ def isPrime(number):
         return True
     return False
 
+def collatzSequence(number):
+    sequence = []
+    sequence.append(number)
+
+    while number > 1:
+        if number % 2 == 0:
+            number = number / 2
+        else:
+            number = number * 3 + 1
+        sequence.append(number)
+    
+    return sequence
+
+
+
 def factorial(number):
     if(number > 1):
         return number * factorial(number-1)
