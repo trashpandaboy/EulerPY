@@ -1,5 +1,3 @@
-
-from cgitb import small
 from datetime import datetime
 
 start = datetime.now()
