@@ -22,8 +22,6 @@ def collatzSequence(number):
     
     return sequence
 
-
-
 def factorial(number):
     if(number > 1):
         return number * factorial(number-1)
