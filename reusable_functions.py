@@ -19,3 +19,9 @@ def sumOfDigits(number):
     charsOfNumber = list(str(number))
     numbers = [int(i) for i in charsOfNumber]
     return sum(numbers)
+
+def stringIsPalindrome(value):
+    if value == value[::-1]:
+        return True
+    else:
+        return False

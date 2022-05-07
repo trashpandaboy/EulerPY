@@ -1,8 +1,5 @@
-
+from reusable_functions import isPrime
 from datetime import datetime
-import string
-import random
-import json
 import sys
 
 
@@ -15,17 +12,6 @@ if(len(sys.argv) > 1):
     print("number set to %s"%number)
 
 start = datetime.now()
-
-def isPrime(number):
-    if number > 1:
-    # check for factors
-        i = 2
-        while i < number:
-            if (number % i) == 0:
-                return False
-            i+= 1
-        
-        return True
 
 def largestFactor(number):
     

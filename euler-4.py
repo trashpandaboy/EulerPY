@@ -1,6 +1,6 @@
+from reusable_functions import stringIsPalindrome
 from datetime import datetime
 import sys
-
 
 number = 13195
 
@@ -22,7 +22,7 @@ def biggestPalindromeNumber():
         while y > 0:
             number = x * y
             numStr = str(number)
-            if numStr == numStr[::-1]:
+            if stringIsPalindrome(numStr):
                 if number > biggest:
                     biggest = number
             y-= 1
