@@ -1,13 +1,12 @@
 from datetime import datetime
 
+from reusable_functions import sumOfDigits
+
 start = datetime.now()
 
 def main():
     powToElab = pow(2,1000)
-    charsOfPow = list(str(powToElab))
-    numbers = [int(i) for i in charsOfPow]
-    sumOf = sum(numbers)
-    return sumOf
+    return sumOfDigits(powToElab)
 
 
 value = main()
