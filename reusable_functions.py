@@ -38,3 +38,20 @@ def stringIsPalindrome(value):
         return True
     else:
         return False
+
+def listOfFirst10KPrimes():
+    first10KPrimes = []
+
+    primesFounds = 0
+    number = 0
+    max = 10000
+    while primesFounds <= max:
+        number +=1
+        if isPrime(number):
+            primesFounds += 1
+            first10KPrimes.append(number)
+    print("Found %s primes"%(primesFounds))
+    print(first10KPrimes)
+    
+    return first10KPrimes
+        

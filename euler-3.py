@@ -1,4 +1,4 @@
-from reusable_functions import isPrime
+from reusable_functions import isPrime, listOfFirst10KPrimes
 from datetime import datetime
 import sys
 
@@ -14,13 +14,21 @@ if(len(sys.argv) > 1):
 start = datetime.now()
 
 def largestFactor(number):
+    listOfPrimes = listOfFirst10KPrimes()
+    listOfPrimes = list(reversed(listOfPrimes))
+
+    for prime in listOfPrimes:
+        if(number % prime == 0):
+            return prime
+    return 1
     
-    divider = number / 2
-    while(divider > 1):
-        if(number%divider == 0):
-            if(isPrime(divider)):
-                return divider
-        divider -= 1
+    # divider = number / 2
+    # while(divider > 1):
+    #     print(divider)
+    #     if(number%divider == 0):
+    #         if(isPrime(divider)):
+    #             return divider
+    #     divider -= 1
 
     return 1
 
