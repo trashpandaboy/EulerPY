@@ -50,8 +50,6 @@ def listOfFirst10KPrimes():
         if isPrime(number):
             primesFounds += 1
             first10KPrimes.append(number)
-    print("Found %s primes"%(primesFounds))
-    print(first10KPrimes)
     
     return first10KPrimes
         
