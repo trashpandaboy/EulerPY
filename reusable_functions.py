@@ -53,3 +53,21 @@ def listOfFirst10KPrimes():
     
     return first10KPrimes
         
+
+def getMonthDays(month, year):
+    if month == 4 or month == 6 or month ==  9 or month == 11:
+        return 30
+    elif month == 2:
+        if isYearLeap(year):
+            return 29
+        else:
+            return 28
+    else:
+        return 31
+
+def isYearLeap(year):
+    if year % 100 == 0 and year % 400 == 0:
+        return True
+    elif year % 4 == 0 and year % 100 != 0:
+        return True
+    return False
