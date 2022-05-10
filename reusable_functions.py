@@ -71,3 +71,30 @@ def isYearLeap(year):
     elif year % 4 == 0 and year % 100 != 0:
         return True
     return False
+
+def getAmountOfDivisors(number):
+    amount = 0
+
+    i = 1
+    while i * i < number:
+        if number % i == 0:
+            amount+=1
+        i+=1
+
+    if i - (number / i) == 1:
+        i-=1
+
+    while i >= 1:
+        if number % i == 0:
+            amount+=1
+        i-=1
+        
+    return amount
+
+def getTriangleNumberOfNumber(number):
+    triangleNumber = 0
+    while number > 0:
+        triangleNumber += number
+        number -= 1
+    
+    return triangleNumber
