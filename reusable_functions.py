@@ -91,6 +91,26 @@ def getAmountOfDivisors(number):
         
     return amount
 
+def getProperDivisors(number):
+    divisors = []
+
+    i = 1
+    while i * i < number:
+        if number % i == 0:
+            divisors.append(i)
+        i+=1
+
+    if i - (number / i) == 1:
+        i-=1
+
+    while i > 1:
+        if number % i == 0:
+            divisors.append(number / i)
+        i-=1
+    
+    return divisors
+
+
 def getTriangleNumberOfNumber(number):
     triangleNumber = 0
     while number > 0:
