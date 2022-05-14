@@ -118,3 +118,14 @@ def getTriangleNumberOfNumber(number):
         number -= 1
     
     return triangleNumber
+
+def getStringValue(string):
+    valueOfString = 0
+    
+    string = string.upper()
+
+    for letter in string:
+        value = ord(letter)
+        valueOfString += (value - 64)
+        
+    return valueOfString
